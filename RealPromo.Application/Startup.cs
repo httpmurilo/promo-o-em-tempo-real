@@ -59,6 +59,7 @@ namespace RealPromo.Application
             app.UseSignalR(cfg => {
                 cfg.MapHub<PromoHub>("/PromoHub");
             });
+            app.UseCors (x => x.AllowAnyOrigin ().AllowAnyMethod ().AllowAnyHeader ());
         }
     }
 }
